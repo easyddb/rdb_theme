@@ -25,13 +25,13 @@ body {
   
   .menu-item {
     color: $header-background-color;
-	text-shadow: none;
+    text-shadow: none;
   }
   
   .menu-item.active,
   .menu-item:hover {
     background-color: $header-background-color;
-	color: $white;
+    color: $white;
   }
 }
 
@@ -60,74 +60,74 @@ body {
   
   .main-menu {
     position: relative;
-	z-index: 10;
+    z-index: 10;
   
     .menu-item.active {
       color: $white;
-	  text-decoration: none;
+      text-decoration: none;
     }
-	
+    
     a {
-	  border: 1px solid $white;
-	  color: $white;
-	  margin: 0 -5px 0 0;
-	  padding: 20px;
-	  position: relative;
-	}
-	
-	a:hover {
-	  color: $white;
-	}
-	
-	a:hover:before,
+      border: 1px solid $white;
+      color: $white;
+      margin: 0 -5px 0 0;
+      padding: 20px;
+      position: relative;
+    }
+    
+    a:hover {
+      color: $white;
+    }
+    
+    a:hover:before,
     li.active a:before {
-	  border: 1px solid $white;
-	  border-bottom: 0;
-	  color: $white;
-	  content: "";
-	  display: block;
-	  height: 8px;
-	  left: -1px;
-	  position: absolute;
-	  top: -8px;
-	  width: 100%;
-	  z-index: 11;
-	}
-	
-	li.active a:before {
-	  text-decoration: none;
-	}
-	
+      border: 1px solid $white;
+      border-bottom: 0;
+      color: $white;
+      content: "";
+      display: block;
+      height: 8px;
+      left: -1px;
+      position: absolute;
+      top: -8px;
+      width: 100%;
+      z-index: 11;
+    }
+    
+    li.active a:before {
+      text-decoration: none;
+    }
+    
     li:first-child a,
     li:first-child a:hover:before,
-	li:first-child.active a:before {
-	  background-color: $menu-item-1-background-color;
-	}
+    li:first-child.active a:before {
+      background-color: $menu-item-1-background-color;
+    }
 
-	li:first-child + li a,
+    li:first-child + li a,
     li:first-child + li a:hover:before,
-	li:first-child + li.active a:before {
-	  background-color: $menu-item-2-background-color;
-	}
-	
-	li:first-child + li + li a,
-	li:first-child + li + li a:hover:before,
-	li:first-child + li + li.active a:before {
-	  background-color: $menu-item-3-background-color;
-	}
-	
-	li:first-child + li + li + li a,
-	li:first-child + li + li + li a:hover:before,
-	li:first-child + li + li + li.active a:before {
-	  background-color: $menu-item-4-background-color;
-	}
-	
-	li:first-child + li + li + li + li a,
-	li:first-child + li + li + li + li a:hover:before,
-	li:first-child + li + li + li + li.active a:before {
-	  background-color: $menu-item-5-background-color;
-	}
-	
+    li:first-child + li.active a:before {
+      background-color: $menu-item-2-background-color;
+    }
+    
+    li:first-child + li + li a,
+    li:first-child + li + li a:hover:before,
+    li:first-child + li + li.active a:before {
+      background-color: $menu-item-3-background-color;
+    }
+    
+    li:first-child + li + li + li a,
+    li:first-child + li + li + li a:hover:before,
+    li:first-child + li + li + li.active a:before {
+      background-color: $menu-item-4-background-color;
+    }
+    
+    li:first-child + li + li + li + li a,
+    li:first-child + li + li + li + li a:hover:before,
+    li:first-child + li + li + li + li.active a:before {
+      background-color: $menu-item-5-background-color;
+    }
+    
   }
   
 }
@@ -158,7 +158,7 @@ body {
   .rs-carousel-item.active a,
   .rs-carousel-item a:hover {
     background-color: $carousel-tab-active-background;
-	color: $link-color;
+    color: $link-color;
   }
   
   .rs-carousel-item a {
@@ -192,7 +192,7 @@ body {
   
     .rs-carousel-item-title {
       font-size: $font-size-small;
-	  line-height: 1em;
+      line-height: 1em;
     }
   }
   
@@ -306,8 +306,8 @@ body {
     li a {
       color: $footer-link-color;
     }
-	
-	li:before {
+    
+    li:before {
       color: $footer-arrow-color;
     }
   }
@@ -334,7 +334,7 @@ body {
   .layout-wrapper,
   .primary-content {
     margin-left: 0;
-	margin-right: 0;
+    margin-right: 0;
     padding-left: 0;
     padding-right: 0;
   }
@@ -388,8 +388,8 @@ body {
   .main-menu-wrapper .main-menu {
     a:hover:before,
     li.active a:before {
-	  display: none;
-	}
+      display: none;
+    }
   }
   
   .icon-angle-right:before,
