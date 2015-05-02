@@ -1,0 +1,417 @@
+body {
+  background-color: $body-background-color;
+}
+
+#page {
+  background: $white;
+  border: 10px solid $white;
+  margin: 0 auto;
+  
+  @include x-large() {
+    width: 1160px;
+  }
+}
+
+.navigation-wrapper {
+  border-bottom: 10px solid $white;
+}
+
+.site-name {
+  display: none;
+}
+
+.topbar-menu {
+  margin-top: 15px;
+  
+  .menu-item {
+    color: $header-background-color;
+	text-shadow: none;
+  }
+  
+  .menu-item.active,
+  .menu-item:hover {
+    background-color: $header-background-color;
+	color: $white;
+  }
+}
+
+.search label,
+.search-field-in-content label,
+.user label {
+  font-family: $font-light;
+  font-size: 28px;
+  line-height: 32px;
+  letter-spacing: 0.5px;
+  margin-bottom: 13px;
+  margin-top: -14px;
+  text-transform: uppercase;
+}
+
+.user .form-submit {
+  margin-top: 31px;
+}
+
+.header-wrapper .user {
+  padding-bottom: 30px;
+}
+
+.main-menu-wrapper {
+  padding-left: 0;
+  
+  .main-menu {
+    position: relative;
+	z-index: 10;
+  
+    .menu-item.active {
+      color: $white;
+	  text-decoration: none;
+    }
+	
+    a {
+	  border: 1px solid $white;
+	  color: $white;
+	  margin: 0 -5px 0 0;
+	  padding: 20px;
+	  position: relative;
+	}
+	
+	a:hover {
+	  color: $white;
+	}
+	
+	a:hover:before,
+    li.active a:before {
+	  border: 1px solid $white;
+	  border-bottom: 0;
+	  color: $white;
+	  content: "";
+	  display: block;
+	  height: 8px;
+	  left: -1px;
+	  position: absolute;
+	  top: -8px;
+	  width: 100%;
+	  z-index: 11;
+	}
+	
+	li.active a:before {
+	  text-decoration: none;
+	}
+	
+    li:first-child a,
+    li:first-child a:hover:before,
+	li:first-child.active a:before {
+	  background-color: $menu-item-1-background-color;
+	}
+
+	li:first-child + li a,
+    li:first-child + li a:hover:before,
+	li:first-child + li.active a:before {
+	  background-color: $menu-item-2-background-color;
+	}
+	
+	li:first-child + li + li a,
+	li:first-child + li + li a:hover:before,
+	li:first-child + li + li.active a:before {
+	  background-color: $menu-item-3-background-color;
+	}
+	
+	li:first-child + li + li + li a,
+	li:first-child + li + li + li a:hover:before,
+	li:first-child + li + li + li.active a:before {
+	  background-color: $menu-item-4-background-color;
+	}
+	
+	li:first-child + li + li + li + li a,
+	li:first-child + li + li + li + li a:hover:before,
+	li:first-child + li + li + li + li.active a:before {
+	  background-color: $menu-item-5-background-color;
+	}
+	
+  }
+  
+}
+
+.navigation-wrapper {
+  height: 65px;
+}
+
+.navigation-wrapper,
+.navigation-inner {
+  overflow: initial;
+}
+
+.secondary-menu .menu-item {
+  color: $black;
+}
+
+.user .form-submit,
+.search .form-submit {
+  @extend %button-header;
+  
+  border: 2px solid $white;
+  font-size: $font-size-large;
+}
+
+.rs-carousel-tabs .rs-carousel-list-tabs {
+
+  .rs-carousel-item.active a,
+  .rs-carousel-item a:hover {
+    background-color: $carousel-tab-active-background;
+	color: $link-color;
+  }
+  
+  .rs-carousel-item a {
+    background-color: $carousel-tab-background;
+  }
+  
+  .rs-carousel-item.active a:before {
+    border-bottom-color: $carousel-tab-active-background;
+  }
+}
+
+.rs-carousel-title {
+  font-size: $font-size-giga;
+  font-family: $font-light;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.rs-carousel-inner {
+  background: $carousel-background;
+  min-height: 200px;
+}
+
+.rs-carousel-mask {
+  li {
+    width: 125px;
+  
+    a {
+      width: 125px;
+    }
+  
+    .rs-carousel-item-title {
+      font-size: $font-size-small;
+	  line-height: 1em;
+    }
+  }
+  
+  .rs-carousel-item-title {
+    display: none;
+  }
+  
+  li:hover .rs-carousel-item-title {
+    display: block;
+  }
+  
+  li:nth-child(5n+1) a {
+    background-color: transparentize($menu-item-1-background-color, .45);
+  }
+  
+  li:nth-child(5n+1):hover a {
+    background-color: transparentize($menu-item-1-background-color, .2);
+  }
+  
+  li:nth-child(5n+2) a {
+    background-color: transparentize($menu-item-2-background-color, .45);
+  }
+  
+  li:nth-child(5n+2):hover a {
+    background-color: transparentize($menu-item-2-background-color, .2);
+  }
+  
+  li:nth-child(5n+3) a {
+    background-color: transparentize($menu-item-3-background-color, .45);
+  }
+  
+  li:nth-child(5n+3):hover a {
+    background-color: transparentize($menu-item-3-background-color, .2);
+  }
+  
+  li:nth-child(5n+4) a {
+    background-color: transparentize($menu-item-4-background-color, .45);
+  }
+  
+  li:nth-child(5n+4):hover a {
+    background-color: transparentize($menu-item-4-background-color, .2);
+  }
+  
+  li:nth-child(5n+5) a {
+    background-color: transparentize($menu-item-5-background-color, .45);
+  }
+  
+  li:nth-child(5n+5):hover a {
+    background-color: transparentize($menu-item-5-background-color, .2);
+  }
+  
+}
+
+.label a,
+.view-node-search-result .list-item .field-type-taxonomy-term-reference a a,
+.ting-reference-reverse-list .list-item .field-type-taxonomy-term-reference a a,
+.subjects .subject a,
+.news-list .news-label a,
+.super-heading .field-name-field-ding-news-library .field-item a {
+  background-color: $label-bg-color;
+}
+
+.label a:hover,
+.view-node-search-result .list-item .field-type-taxonomy-term-reference a a:hover,
+.ting-reference-reverse-list .list-item .field-type-taxonomy-term-reference a a:hover,
+.subjects .subject a:hover,
+.news-list .news-label a:hover,
+.super-heading .field-name-field-ding-news-library .field-item a:hover,
+.event-list-leaf .event-list-day {
+  background-color: $label-bg-color-hover;
+}
+
+.pane-ting-object {
+
+  .collapsible .field-group-format-title:before,
+  .pane-ting-object .ding-periodical-fold:before {
+    color: $link-color;
+  }
+  
+}
+
+.sub-menu {
+
+  > li a,
+  li:before {
+    color: $link-color;
+  }
+  
+  li a:hover {
+    color: $link-color-hover;
+  }
+  
+}
+
+.bottom {
+  background-color: $footer-background-color;
+  position: static;
+  margin-bottom: -10px;
+  margin-left: -10px;
+  margin-right: -10px;
+}
+
+.footer {
+  position: static;
+  margin-left: -10px;
+  margin-right: -10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  
+  .menu {
+    li a {
+      color: $footer-link-color;
+    }
+	
+	li:before {
+      color: $footer-arrow-color;
+    }
+  }
+}
+
+.footer-inner {
+  padding-top: 15px;
+  position: relative;
+}
+
+.footer-inner:before {
+  background: url('../img/ribbon.png') repeat 0 0;
+  border-bottom: 1px solid $white;
+  content: "";
+  display: block;
+  height: 14px;
+  left: -10px;
+  position: absolute;
+  top: -30px;
+  width: 110%;
+}
+
+.frontpage-layout {
+  .layout-wrapper,
+  .primary-content {
+    margin-left: 0;
+	margin-right: 0;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  
+  .secondary-content {
+    padding-left: 0;
+  }
+  
+  .tertiary-content {
+    padding-right: 0;
+  }
+}
+
+.group-blocks--wrapper {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.content-wrapper,
+.default-layout {
+  margin-top: 0;
+}
+
+.default-layout {
+  .layout-wrapper {
+    margin-left: 0;
+    margin-right: 0;
+    padding: 0;
+  }
+  
+  .primary-content {
+    padding-right: 0;
+  }
+  
+  .secondary-content {
+    padding-left: 0;
+  }
+}
+
+.pane-ding-facetbrowser a:visited,
+.pane-search-backends a:visited {
+  color: $footer-link-color;
+}
+
+.tabs.primary {
+  height: 60px;
+  padding-left: 0;
+}
+
+@include small-medium() {
+  .main-menu-wrapper .main-menu {
+    a:hover:before,
+    li.active a:before {
+	  display: none;
+	}
+  }
+  
+  .icon-angle-right:before,
+  .main-menu li:before,
+  .header-wrapper .pane-user-menu .sub-menu li:before,
+  .secondary-menu li:before, .system-user-menu li:before,
+  .sub-menu li:before, .footer .menu li:before {
+    display: none;
+  }
+  
+  .main-menu li.first .menu-item {
+    margin-left: 0;
+  }
+  
+  .navigation-wrapper,
+  .navigation-inner {
+    height: initial;
+    overflow: hidden;
+  }
+  
+  .secondary-menu li .menu-item,
+  .header-wrapper .pane-user-menu .sub-menu li .menu-item {
+    color: $header-background-color;
+  }
+}
