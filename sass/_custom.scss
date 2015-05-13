@@ -428,4 +428,31 @@ body {
   .header-wrapper .pane-user-menu .sub-menu li .menu-item {
     color: $header-background-color;
   }
+  
+  .rs-carousel-tabs {
+    padding-top: 20px;
+  }
+  
+  .rs-carousel-mask .rs-carousel-item-title {
+    display: block;
+  }
+  
+  .user {
+    .form-item-name {
+      width: 100%;
+    }
+  
+    label {
+      padding-top: 14px;
+    }
+  
+    .form-actions {
+      margin-left: 10px;
+    }
+    
+    .form-item-name,
+    .form-item-pass {
+      padding-right: 0;
+    }
+  }
 }
