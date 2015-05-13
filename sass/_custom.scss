@@ -428,4 +428,12 @@ body {
   .header-wrapper .pane-user-menu .sub-menu li .menu-item {
     color: $header-background-color;
   }
+  
+  .rs-carousel-tabs {
+    padding-top: 20px;
+  }
+  
+  .rs-carousel-mask .rs-carousel-item-title {
+    display: block;
+  }
 }
