@@ -722,4 +722,22 @@ body {
   .rs-carousel-mask .rs-carousel-item-title {
     display: block;
   }
+
+  /* line 441, ../sass/_custom.scss */
+  .user .form-item-name {
+    width: 100%;
+  }
+  /* line 445, ../sass/_custom.scss */
+  .user label {
+    padding-top: 14px;
+  }
+  /* line 449, ../sass/_custom.scss */
+  .user .form-actions {
+    margin-left: 10px;
+  }
+  /* line 453, ../sass/_custom.scss */
+  .user .form-item-name,
+  .user .form-item-pass {
+    padding-right: 0;
+  }
 }
