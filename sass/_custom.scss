@@ -8,10 +8,6 @@
   @include create-gradient-button($button-theme-color, $menu-item-2-background-color, $menu-item-1-background-color);
 }
 
-body {
-  background-color: $body-background-color;
-}
-
 #page {
   background: $white;
   border: 10px solid $white;
@@ -77,27 +73,26 @@ body {
     z-index: 10;
   
     .menu-item.active {
-      color: $white;
       text-decoration: none;
     }
     
     a {
       border: 1px solid $white;
-      color: $white;
+      color: $navigation-text-color;
       margin: 0 -5px 0 0;
       padding: 20px;
       position: relative;
     }
     
     a:hover {
-      color: $white;
+      color: $navigation-text-color-active;
     }
     
     a:hover:before,
     li.active a:before {
       border: 1px solid $white;
       border-bottom: 0;
-      color: $white;
+      color: $navigation-text-color;
       content: "";
       display: block;
       height: 8px;
@@ -171,16 +166,7 @@ body {
 
   .rs-carousel-item.active a,
   .rs-carousel-item a:hover {
-    background-color: $carousel-tab-active-background;
     color: $link-color;
-  }
-  
-  .rs-carousel-item a {
-    background-color: $carousel-tab-background;
-  }
-  
-  .rs-carousel-item.active a:before {
-    border-bottom-color: $carousel-tab-active-background;
   }
 }
 
@@ -192,7 +178,6 @@ body {
 }
 
 .rs-carousel-inner {
-  background: $carousel-background;
   min-height: 200px;
 }
 
@@ -260,25 +245,6 @@ body {
   
 }
 
-.label a,
-.view-node-search-result .list-item .field-type-taxonomy-term-reference a a,
-.ting-reference-reverse-list .list-item .field-type-taxonomy-term-reference a a,
-.subjects .subject a,
-.news-list .news-label a,
-.super-heading .field-name-field-ding-news-library .field-item a {
-  background-color: $label-bg-color;
-}
-
-.label a:hover,
-.view-node-search-result .list-item .field-type-taxonomy-term-reference a a:hover,
-.ting-reference-reverse-list .list-item .field-type-taxonomy-term-reference a a:hover,
-.subjects .subject a:hover,
-.news-list .news-label a:hover,
-.super-heading .field-name-field-ding-news-library .field-item a:hover,
-.event-list-leaf .event-list-day {
-  background-color: $label-bg-color-hover;
-}
-
 .pane-ting-object {
 
   .collapsible .field-group-format-title:before,
@@ -310,6 +276,7 @@ body {
 }
 
 .footer {
+  background-color: $footer-background-color;
   position: static;
   margin-left: -10px;
   margin-right: -10px;

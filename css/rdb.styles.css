@@ -117,6 +117,273 @@ a:focus {
 }
 
 /**
+ * Buttons
+ *
+ * @author magnify
+ */
+/* Variables
+   ========================================================================== */
+/* Extends
+   ========================================================================== */
+/* line 32, ../sass/configuration/_buttons.scss */
+.user .form-submit,
+.search .form-submit {
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+  border-radius: 8px;
+  display: inline-block;
+  font-size: 100%;
+  padding: 8px 14px;
+  position: relative;
+  box-shadow: 0 0 1px #595959 inset;
+  cursor: pointer;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 100%;
+}
+/* line 46, ../sass/configuration/_buttons.scss */
+.user .form-submit:focus,
+.search .form-submit:focus, .user .form-submit:hover,
+.search .form-submit:hover, .user .form-submit:active,
+.search .form-submit:active {
+  text-decoration: none;
+}
+/* line 53, ../sass/configuration/_buttons.scss */
+.user .disabled.form-submit,
+.search .disabled.form-submit, .user [disabled].form-submit,
+.search [disabled].form-submit {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=65);
+  opacity: 0.65;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  cursor: default;
+}
+
+/* Mixins
+   ========================================================================== */
+/* Default button, we dont use gradiant mixin sin since it's part of color module */
+/* line 97, ../sass/configuration/_buttons.scss */
+.button,
+a.button {
+  background-color: #444443;
+  border: 1px;
+  color: #fffff8;
+  line-height: 100%;
+  padding: 8px 14px;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+  border-radius: 8px;
+  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzQ0NDQ0MyIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzFlMWUxZiIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+  background-size: 100%;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #444443), color-stop(100%, #1e1e1f));
+  background-image: -moz-linear-gradient(#444443, #1e1e1f);
+  background-image: -webkit-linear-gradient(#444443, #1e1e1f);
+  background-image: linear-gradient(#444443, #1e1e1f);
+}
+/* line 109, ../sass/configuration/_buttons.scss */
+.button:link, .button:visited, .button:focus, .button:active,
+a.button:link,
+a.button:visited,
+a.button:focus,
+a.button:active {
+  color: #fffff8;
+  text-decoration: none;
+  background-image: none;
+  background-color: #444443;
+}
+/* line 119, ../sass/configuration/_buttons.scss */
+.button:hover,
+a.button:hover {
+  background-color: #1e1e1e;
+  background-image: none;
+}
+
+/* Default button */
+/* Theme button */
+/* Action button */
+/* Warning button */
+/* Danger button */
+/* Don't use native buttons on iOS */
+/* line 152, ../sass/configuration/_buttons.scss */
+input[type=submit].button,
+button.button {
+  -webkit-appearance: none;
+}
+
+/* Correct FF button padding */
+@-moz-document url-prefix() {
+  /* line 160, ../sass/configuration/_buttons.scss */
+  button::-moz-focus-inner,
+  input[type="reset"]::-moz-focus-inner,
+  input[type="button"]::-moz-focus-inner,
+  input[type="submit"]::-moz-focus-inner,
+  input[type="file"] > input[type="button"]::-moz-focus-inner {
+    border: none;
+    padding: 0;
+  }
+}
+/* Colors settings */
+/* line 3, ../sass/configuration/_colors_settings.scss */
+body {
+  background-color: #d4d4d4;
+}
+
+/* line 7, ../sass/configuration/_colors_settings.scss */
+.header-wrapper {
+  background-color: #001a27;
+}
+
+/* line 11, ../sass/configuration/_colors_settings.scss */
+.topbar {
+  background-color: #d8d8d8;
+  color: #fffffa;
+}
+
+/* line 16, ../sass/configuration/_colors_settings.scss */
+.navigation-wrapper {
+  background-color: #d8d8d8;
+  color: #959594;
+}
+
+/* line 21, ../sass/configuration/_colors_settings.scss */
+.main-menu .menu-item,
+.header-wrapper .pane-user-menu .sub-menu .menu-item,
+.secondary-menu .menu-item,
+.system-user-menu .menu-item {
+  color: #959594;
+}
+
+/* line 28, ../sass/configuration/_colors_settings.scss */
+.main-menu .menu-item:hover,
+.header-wrapper .pane-user-menu .sub-menu .menu-item:hover,
+.secondary-menu .menu-item:hover,
+.system-user-menu .menu-item:hover,
+.main-menu .menu-item.active,
+.header-wrapper .pane-user-menu .sub-menu .menu-item.active,
+.secondary-menu .menu-item.active,
+.system-user-menu .menu-item.active {
+  color: #000002;
+}
+
+/* line 39, ../sass/configuration/_colors_settings.scss */
+.rs-carousel {
+  background-color: #a32e10;
+}
+
+/* line 43, ../sass/configuration/_colors_settings.scss */
+.rs-carousel-inner {
+  background: #d8d8d8;
+}
+
+/* line 47, ../sass/configuration/_colors_settings.scss */
+.rs-carousel-tabs .rs-carousel-list-tabs .rs-carousel-item.active a,
+.rs-carousel-tabs .rs-carousel-list-tabs .rs-carousel-item a:hover {
+  background-color: #b7b7b5;
+}
+
+/* line 52, ../sass/configuration/_colors_settings.scss */
+.rs-carousel-tabs .rs-carousel-list-tabs .rs-carousel-item.active a:before {
+  border-bottom-color: #b7b7b5;
+}
+
+/* line 56, ../sass/configuration/_colors_settings.scss */
+.rs-carousel-tabs .rs-carousel-list-tabs .rs-carousel-item a {
+  background-color: #7f7f7f;
+}
+
+/* line 60, ../sass/configuration/_colors_settings.scss */
+.label a,
+.view-node-search-result .list-item .field-type-taxonomy-term-reference a a,
+.ting-reference-reverse-list .list-item .field-type-taxonomy-term-reference a a,
+.subjects .subject a,
+.news-list .news-label a,
+.super-heading .field-name-field-ding-news-library .field-item a {
+  background-color: #73b400;
+  color: #fffffd;
+}
+
+/* line 70, ../sass/configuration/_colors_settings.scss */
+.label a:hover,
+.view-node-search-result .list-item .field-type-taxonomy-term-reference a a:hover,
+.ting-reference-reverse-list .list-item .field-type-taxonomy-term-reference a a:hover,
+.subjects .subject a:hover,
+.news-list .news-label a:hover,
+.super-heading .field-name-field-ding-news-library .field-item a:hover,
+.event-list-leaf .event-list-day {
+  background-color: #83cb03;
+  color: #fafaf7;
+}
+
+/* line 81, ../sass/configuration/_colors_settings.scss */
+.layout-wrapper {
+  background-color: #fffffe;
+}
+
+/* line 85, ../sass/configuration/_colors_settings.scss */
+.field-name-field-ding-news-materials .field-item,
+.library-list .views-row, .field-name-field-ding-page-materials .field-item,
+.news-list .news-list-item,
+#ding-library-front .opening-hours-week .header,
+.groups-list .groups-list-item {
+  background-color: #ebebeb;
+}
+
+/* line 93, ../sass/configuration/_colors_settings.scss */
+.field-name-field-ding-news-materials .field-item:nth-child(odd),
+.library-list .views-row:nth-child(odd),
+.field-name-field-ding-page-materials .field-item:nth-child(odd),
+.news-list .news-list-item:nth-child(odd),
+.event-list .event-list-item:nth-child(odd),
+.opening-hours-week .days .odd,
+.staff-list .staff-list-item:nth-child(odd),
+.staff-list-all .staff-list-item:nth-child(odd),
+.groups-list .groups-list-item:nth-child(odd) {
+  background-color: #e8e8e8;
+  color: #4c4c4c;
+}
+
+/* line 106, ../sass/configuration/_colors_settings.scss */
+.field-name-field-ding-news-materials .field-item:nth-child(even),
+.library-list .views-row:nth-child(even),
+.field-name-field-ding-page-materials .field-item:nth-child(even),
+.news-list .news-list-item:nth-child(even),
+.event-list .event-list-item:nth-child(even),
+.opening-hours-week .days .even,
+.staff-list .staff-list-item:nth-child(even),
+.staff-list-all .staff-list-item:nth-child(even),
+.groups-list .groups-list-item:nth-child(even) {
+  background-color: #f2f2f2;
+  color: #4c4c4c;
+}
+
+/* line 119, ../sass/configuration/_colors_settings.scss */
+.footer .pane-title {
+  color: #fefff9;
+}
+
+/* line 123, ../sass/configuration/_colors_settings.scss */
+a:link {
+  color: #e03402;
+}
+
+/* line 127, ../sass/configuration/_colors_settings.scss */
+a:visited,
+a:hover {
+  color: #eb4a1b;
+}
+
+/* line 132, ../sass/configuration/_colors_settings.scss */
+.ui-dialog {
+  background-color: #00cafd;
+}
+
+/* line 136, ../sass/configuration/_colors_settings.scss */
+.ui-widget-content {
+  color: #000003;
+}
+
+/**
  * Mixins
  *
  * @author magnify
@@ -135,112 +402,6 @@ a:focus {
  *
  * Usage example: pseudo-arrow(10px, #000, top, center, $offset: 20px)
    ========================================================================== */
-/**
- * Buttons
- *
- * @author magnify
- */
-/* Variables
-   ========================================================================== */
-/* Extends
-   ========================================================================== */
-/* line 32, ../../../../../profiles/ding2/themes/ddbasic/sass/framework/_buttons.scss */
-.user .form-submit,
-.search .form-submit {
-  -moz-border-radius: 8px;
-  -webkit-border-radius: 8px;
-  border-radius: 8px;
-  display: inline-block;
-  font-size: 100%;
-  padding: 8px 14px;
-  position: relative;
-  box-shadow: 0 0 1px #595959 inset;
-  cursor: pointer;
-  text-align: center;
-  vertical-align: middle;
-  line-height: 100%;
-}
-/* line 46, ../../../../../profiles/ding2/themes/ddbasic/sass/framework/_buttons.scss */
-.user .form-submit:focus,
-.search .form-submit:focus, .user .form-submit:hover,
-.search .form-submit:hover, .user .form-submit:active,
-.search .form-submit:active {
-  text-decoration: none;
-}
-/* line 53, ../../../../../profiles/ding2/themes/ddbasic/sass/framework/_buttons.scss */
-.user .disabled.form-submit,
-.search .disabled.form-submit, .user [disabled].form-submit,
-.search [disabled].form-submit {
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=65);
-  opacity: 0.65;
-  -moz-box-shadow: none;
-  -webkit-box-shadow: none;
-  box-shadow: none;
-  cursor: default;
-}
-
-/* Mixins
-   ========================================================================== */
-/* Default button, we dont use gradiant mixin sin since it's part of color module */
-/* line 97, ../../../../../profiles/ding2/themes/ddbasic/sass/framework/_buttons.scss */
-.button,
-a.button {
-  background-color: #444443;
-  border: 1px;
-  color: #fffff8;
-  line-height: 100%;
-  padding: 8px 14px;
-  -moz-border-radius: 8px;
-  -webkit-border-radius: 8px;
-  border-radius: 8px;
-  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzQ0NDQ0MyIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzFlMWUxZiIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
-  background-size: 100%;
-  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #444443), color-stop(100%, #1e1e1f));
-  background-image: -moz-linear-gradient(#444443, #1e1e1f);
-  background-image: -webkit-linear-gradient(#444443, #1e1e1f);
-  background-image: linear-gradient(#444443, #1e1e1f);
-}
-/* line 109, ../../../../../profiles/ding2/themes/ddbasic/sass/framework/_buttons.scss */
-.button:link, .button:visited, .button:focus, .button:active,
-a.button:link,
-a.button:visited,
-a.button:focus,
-a.button:active {
-  color: #fffff8;
-  text-decoration: none;
-  background-image: none;
-  background-color: #444443;
-}
-/* line 119, ../../../../../profiles/ding2/themes/ddbasic/sass/framework/_buttons.scss */
-.button:hover,
-a.button:hover {
-  background-color: #1e1e1e;
-  background-image: none;
-}
-
-/* Theme button */
-/* Action button */
-/* Warning button */
-/* Danger button */
-/* Don't use native buttons on iOS */
-/* line 147, ../../../../../profiles/ding2/themes/ddbasic/sass/framework/_buttons.scss */
-input[type=submit].button,
-button.button {
-  -webkit-appearance: none;
-}
-
-/* Correct FF button padding */
-@-moz-document url-prefix() {
-  /* line 155, ../../../../../profiles/ding2/themes/ddbasic/sass/framework/_buttons.scss */
-  button::-moz-focus-inner,
-  input[type="reset"]::-moz-focus-inner,
-  input[type="button"]::-moz-focus-inner,
-  input[type="submit"]::-moz-focus-inner,
-  input[type="file"] > input[type="button"]::-moz-focus-inner {
-    border: none;
-    padding: 0;
-  }
-}
 /* Theme button */
 /* Header button */
 /* line 7, ../sass/_custom.scss */
@@ -257,13 +418,13 @@ button.button {
   border: 0;
   color: #fff;
 }
-/* line 78, ../../../../../profiles/ding2/themes/ddbasic/sass/framework/_buttons.scss */
+/* line 78, ../sass/configuration/_buttons.scss */
 .user .form-submit:link,
 .search .form-submit:link, .user .form-submit:visited,
 .search .form-submit:visited {
   color: #fff;
 }
-/* line 84, ../../../../../profiles/ding2/themes/ddbasic/sass/framework/_buttons.scss */
+/* line 84, ../sass/configuration/_buttons.scss */
 .user .form-submit:link,
 .search .form-submit:link, .user .form-submit:visited,
 .search .form-submit:visited, .user .form-submit:focus,
@@ -280,50 +441,45 @@ button.button {
 }
 
 /* line 11, ../sass/_custom.scss */
-body {
-  background-color: #d4d4d4;
-}
-
-/* line 15, ../sass/_custom.scss */
 #page {
   background: #fff;
   border: 10px solid #fff;
   margin: 0 auto;
 }
 @media only screen and (min-width: 1211px) {
-  /* line 15, ../sass/_custom.scss */
+  /* line 11, ../sass/_custom.scss */
   #page {
     width: 1160px;
   }
 }
 
-/* line 25, ../sass/_custom.scss */
+/* line 21, ../sass/_custom.scss */
 .navigation-wrapper {
   border-bottom: 10px solid #fff;
 }
 
-/* line 29, ../sass/_custom.scss */
+/* line 25, ../sass/_custom.scss */
 .site-name {
   display: none;
 }
 
-/* line 33, ../sass/_custom.scss */
+/* line 29, ../sass/_custom.scss */
 .topbar-menu {
   margin-top: 15px;
 }
-/* line 36, ../sass/_custom.scss */
+/* line 32, ../sass/_custom.scss */
 .topbar-menu .menu-item {
   color: #001a27;
   text-shadow: none;
 }
-/* line 41, ../sass/_custom.scss */
+/* line 37, ../sass/_custom.scss */
 .topbar-menu .menu-item.active,
 .topbar-menu .menu-item:hover {
   background-color: #001a27;
   color: #fff;
 }
 
-/* line 48, ../sass/_custom.scss */
+/* line 44, ../sass/_custom.scss */
 .search label,
 .search-field-in-content label,
 .user label {
@@ -336,53 +492,52 @@ body {
   text-transform: uppercase;
 }
 
-/* line 60, ../sass/_custom.scss */
+/* line 56, ../sass/_custom.scss */
 .user .form-submit {
   margin-top: 31px;
 }
 
-/* line 64, ../sass/_custom.scss */
+/* line 60, ../sass/_custom.scss */
 .header-wrapper .user {
   padding: 30px 10px 30px 0;
 }
 
-/* line 68, ../sass/_custom.scss */
+/* line 64, ../sass/_custom.scss */
 .header-wrapper .search {
   padding-bottom: 40px;
 }
 
-/* line 72, ../sass/_custom.scss */
+/* line 68, ../sass/_custom.scss */
 .main-menu-wrapper {
   padding-left: 0;
 }
-/* line 75, ../sass/_custom.scss */
+/* line 71, ../sass/_custom.scss */
 .main-menu-wrapper .main-menu {
   position: relative;
   z-index: 10;
 }
-/* line 79, ../sass/_custom.scss */
+/* line 75, ../sass/_custom.scss */
 .main-menu-wrapper .main-menu .menu-item.active {
-  color: #fff;
   text-decoration: none;
 }
-/* line 84, ../sass/_custom.scss */
+/* line 79, ../sass/_custom.scss */
 .main-menu-wrapper .main-menu a {
   border: 1px solid #fff;
-  color: #fff;
+  color: #959594;
   margin: 0 -5px 0 0;
   padding: 20px;
   position: relative;
 }
-/* line 92, ../sass/_custom.scss */
+/* line 87, ../sass/_custom.scss */
 .main-menu-wrapper .main-menu a:hover {
-  color: #fff;
+  color: #000002;
 }
-/* line 96, ../sass/_custom.scss */
+/* line 91, ../sass/_custom.scss */
 .main-menu-wrapper .main-menu a:hover:before,
 .main-menu-wrapper .main-menu li.active a:before {
   border: 1px solid #fff;
   border-bottom: 0;
-  color: #fff;
+  color: #959594;
   content: "";
   display: block;
   height: 8px;
@@ -392,80 +547,71 @@ body {
   width: 100%;
   z-index: 11;
 }
-/* line 111, ../sass/_custom.scss */
+/* line 106, ../sass/_custom.scss */
 .main-menu-wrapper .main-menu li.active a:before {
   text-decoration: none;
 }
-/* line 115, ../sass/_custom.scss */
+/* line 110, ../sass/_custom.scss */
 .main-menu-wrapper .main-menu li:first-child a,
 .main-menu-wrapper .main-menu li:first-child a:hover:before,
 .main-menu-wrapper .main-menu li:first-child.active a:before {
   background-color: #e33503;
 }
-/* line 121, ../sass/_custom.scss */
+/* line 116, ../sass/_custom.scss */
 .main-menu-wrapper .main-menu li:first-child + li a,
 .main-menu-wrapper .main-menu li:first-child + li a:hover:before,
 .main-menu-wrapper .main-menu li:first-child + li.active a:before {
   background-color: #f3871b;
 }
-/* line 127, ../sass/_custom.scss */
+/* line 122, ../sass/_custom.scss */
 .main-menu-wrapper .main-menu li:first-child + li + li a,
 .main-menu-wrapper .main-menu li:first-child + li + li a:hover:before,
 .main-menu-wrapper .main-menu li:first-child + li + li.active a:before {
   background-color: #73b400;
 }
-/* line 133, ../sass/_custom.scss */
+/* line 128, ../sass/_custom.scss */
 .main-menu-wrapper .main-menu li:first-child + li + li + li a,
 .main-menu-wrapper .main-menu li:first-child + li + li + li a:hover:before,
 .main-menu-wrapper .main-menu li:first-child + li + li + li.active a:before {
   background-color: #73a29a;
 }
-/* line 139, ../sass/_custom.scss */
+/* line 134, ../sass/_custom.scss */
 .main-menu-wrapper .main-menu li:first-child + li + li + li + li a,
 .main-menu-wrapper .main-menu li:first-child + li + li + li + li a:hover:before,
 .main-menu-wrapper .main-menu li:first-child + li + li + li + li.active a:before {
   background-color: #436a71;
 }
 
-/* line 149, ../sass/_custom.scss */
+/* line 144, ../sass/_custom.scss */
 .navigation-wrapper {
   height: 65px;
 }
 
-/* line 153, ../sass/_custom.scss */
+/* line 148, ../sass/_custom.scss */
 .navigation-wrapper,
 .navigation-inner {
   overflow: initial;
 }
 
-/* line 158, ../sass/_custom.scss */
+/* line 153, ../sass/_custom.scss */
 .secondary-menu .menu-item {
   color: #000;
 }
 
-/* line 162, ../sass/_custom.scss */
+/* line 157, ../sass/_custom.scss */
 .user .form-submit,
 .search .form-submit {
   border: 2px solid #fff;
   font-size: 130%;
 }
 
-/* line 172, ../sass/_custom.scss */
+/* line 167, ../sass/_custom.scss */
 .rs-carousel-tabs .rs-carousel-list-tabs .rs-carousel-item.active a,
 .rs-carousel-tabs .rs-carousel-list-tabs .rs-carousel-item a:hover {
-  background-color: #b7b7b5;
   color: #e03402;
 }
-/* line 178, ../sass/_custom.scss */
-.rs-carousel-tabs .rs-carousel-list-tabs .rs-carousel-item a {
-  background-color: #7f7f7f;
-}
-/* line 182, ../sass/_custom.scss */
-.rs-carousel-tabs .rs-carousel-list-tabs .rs-carousel-item.active a:before {
-  border-bottom-color: #b7b7b5;
-}
 
-/* line 187, ../sass/_custom.scss */
+/* line 173, ../sass/_custom.scss */
 .rs-carousel-title {
   font-size: 200%;
   font-family: "SourceSansProLight";
@@ -473,112 +619,90 @@ body {
   text-transform: uppercase;
 }
 
-/* line 194, ../sass/_custom.scss */
+/* line 180, ../sass/_custom.scss */
 .rs-carousel-inner {
-  background: #d8d8d8;
   min-height: 200px;
 }
 
-/* line 200, ../sass/_custom.scss */
+/* line 185, ../sass/_custom.scss */
 .rs-carousel-mask li {
   width: 125px;
 }
-/* line 203, ../sass/_custom.scss */
+/* line 188, ../sass/_custom.scss */
 .rs-carousel-mask li a {
   width: 125px;
 }
-/* line 207, ../sass/_custom.scss */
+/* line 192, ../sass/_custom.scss */
 .rs-carousel-mask li .rs-carousel-item-title {
   font-size: 85%;
   line-height: 1em;
 }
-/* line 213, ../sass/_custom.scss */
+/* line 198, ../sass/_custom.scss */
 .rs-carousel-mask .rs-carousel-item-title {
   display: none;
 }
-/* line 217, ../sass/_custom.scss */
+/* line 202, ../sass/_custom.scss */
 .rs-carousel-mask li:hover .rs-carousel-item-title {
   display: block;
 }
-/* line 221, ../sass/_custom.scss */
+/* line 206, ../sass/_custom.scss */
 .rs-carousel-mask li:nth-child(5n+1) a {
   background-color: rgba(227, 53, 3, 0.55);
 }
-/* line 225, ../sass/_custom.scss */
+/* line 210, ../sass/_custom.scss */
 .rs-carousel-mask li:nth-child(5n+1):hover a {
   background-color: rgba(227, 53, 3, 0.8);
 }
-/* line 229, ../sass/_custom.scss */
+/* line 214, ../sass/_custom.scss */
 .rs-carousel-mask li:nth-child(5n+2) a {
   background-color: rgba(243, 135, 27, 0.55);
 }
-/* line 233, ../sass/_custom.scss */
+/* line 218, ../sass/_custom.scss */
 .rs-carousel-mask li:nth-child(5n+2):hover a {
   background-color: rgba(243, 135, 27, 0.8);
 }
-/* line 237, ../sass/_custom.scss */
+/* line 222, ../sass/_custom.scss */
 .rs-carousel-mask li:nth-child(5n+3) a {
   background-color: rgba(115, 180, 0, 0.55);
 }
-/* line 241, ../sass/_custom.scss */
+/* line 226, ../sass/_custom.scss */
 .rs-carousel-mask li:nth-child(5n+3):hover a {
   background-color: rgba(115, 180, 0, 0.8);
 }
-/* line 245, ../sass/_custom.scss */
+/* line 230, ../sass/_custom.scss */
 .rs-carousel-mask li:nth-child(5n+4) a {
   background-color: rgba(115, 162, 154, 0.55);
 }
-/* line 249, ../sass/_custom.scss */
+/* line 234, ../sass/_custom.scss */
 .rs-carousel-mask li:nth-child(5n+4):hover a {
   background-color: rgba(115, 162, 154, 0.8);
 }
-/* line 253, ../sass/_custom.scss */
+/* line 238, ../sass/_custom.scss */
 .rs-carousel-mask li:nth-child(5n+5) a {
   background-color: rgba(67, 106, 113, 0.55);
 }
-/* line 257, ../sass/_custom.scss */
+/* line 242, ../sass/_custom.scss */
 .rs-carousel-mask li:nth-child(5n+5):hover a {
   background-color: rgba(67, 106, 113, 0.8);
 }
 
-/* line 263, ../sass/_custom.scss */
-.label a,
-.view-node-search-result .list-item .field-type-taxonomy-term-reference a a,
-.ting-reference-reverse-list .list-item .field-type-taxonomy-term-reference a a,
-.subjects .subject a,
-.news-list .news-label a,
-.super-heading .field-name-field-ding-news-library .field-item a {
-  background-color: #73b400;
-}
-
-/* line 272, ../sass/_custom.scss */
-.label a:hover,
-.view-node-search-result .list-item .field-type-taxonomy-term-reference a a:hover,
-.ting-reference-reverse-list .list-item .field-type-taxonomy-term-reference a a:hover,
-.subjects .subject a:hover,
-.news-list .news-label a:hover,
-.super-heading .field-name-field-ding-news-library .field-item a:hover,
-.event-list-leaf .event-list-day {
-  background-color: #83cb03;
-}
-
-/* line 284, ../sass/_custom.scss */
+/* line 250, ../sass/_custom.scss */
 .pane-ting-object .collapsible .field-group-format-title:before,
 .pane-ting-object .pane-ting-object .ding-periodical-fold:before {
   color: #e03402;
 }
 
-/* line 293, ../sass/_custom.scss */
+/* line 259, ../sass/_custom.scss */
 .sub-menu > li a,
 .sub-menu li:before {
   color: #e03402;
 }
-/* line 298, ../sass/_custom.scss */
+/* line 264, ../sass/_custom.scss */
 .sub-menu li a:hover {
   color: #eb4a1b;
 }
 
-/* line 304, ../sass/_custom.scss */
+/* line 270, ../sass/_custom.scss */
 .bottom {
   background-color: #001a27;
   position: static;
@@ -587,30 +711,31 @@ body {
   margin-right: -10px;
 }
 
-/* line 312, ../sass/_custom.scss */
+/* line 278, ../sass/_custom.scss */
 .footer {
+  background-color: #001a27;
   position: static;
   margin-left: -10px;
   margin-right: -10px;
   padding-left: 10px;
   padding-right: 10px;
 }
-/* line 320, ../sass/_custom.scss */
+/* line 287, ../sass/_custom.scss */
 .footer .menu li a {
   color: #bcdf4d;
 }
-/* line 324, ../sass/_custom.scss */
+/* line 291, ../sass/_custom.scss */
 .footer .menu li:before {
   color: #006987;
 }
 
-/* line 330, ../sass/_custom.scss */
+/* line 297, ../sass/_custom.scss */
 .footer-inner {
   padding-top: 15px;
   position: relative;
 }
 
-/* line 335, ../sass/_custom.scss */
+/* line 302, ../sass/_custom.scss */
 .footer-inner:before {
   background: url("../img/ribbon.png") repeat 0 0;
   border-bottom: 1px solid #fff;
@@ -623,7 +748,7 @@ body {
   width: 110%;
 }
 
-/* line 348, ../sass/_custom.scss */
+/* line 315, ../sass/_custom.scss */
 .frontpage-layout .layout-wrapper,
 .frontpage-layout .primary-content {
   margin-left: 0;
@@ -631,62 +756,62 @@ body {
   padding-left: 0;
   padding-right: 0;
 }
-/* line 356, ../sass/_custom.scss */
+/* line 323, ../sass/_custom.scss */
 .frontpage-layout .secondary-content {
   padding-left: 0;
 }
-/* line 360, ../sass/_custom.scss */
+/* line 327, ../sass/_custom.scss */
 .frontpage-layout .tertiary-content {
   padding-right: 0;
 }
 
-/* line 365, ../sass/_custom.scss */
+/* line 332, ../sass/_custom.scss */
 .group-blocks--wrapper {
   padding-left: 0;
   padding-right: 0;
 }
 
-/* line 370, ../sass/_custom.scss */
+/* line 337, ../sass/_custom.scss */
 .content-wrapper,
 .default-layout {
   margin-top: 0;
 }
 
-/* line 376, ../sass/_custom.scss */
+/* line 343, ../sass/_custom.scss */
 .default-layout .layout-wrapper {
   margin-left: 0;
   margin-right: 0;
   padding: 0;
 }
-/* line 382, ../sass/_custom.scss */
+/* line 349, ../sass/_custom.scss */
 .default-layout .primary-content {
   padding-right: 0;
 }
-/* line 386, ../sass/_custom.scss */
+/* line 353, ../sass/_custom.scss */
 .default-layout .secondary-content {
   padding-left: 0;
 }
 
-/* line 391, ../sass/_custom.scss */
+/* line 358, ../sass/_custom.scss */
 .pane-ding-facetbrowser a:visited,
 .pane-search-backends a:visited {
   color: #bcdf4d;
 }
 
-/* line 396, ../sass/_custom.scss */
+/* line 363, ../sass/_custom.scss */
 .tabs.primary {
   height: 60px;
   padding-left: 0;
 }
 
 @media only screen and (max-width: 768px) {
-  /* line 403, ../sass/_custom.scss */
+  /* line 370, ../sass/_custom.scss */
   .main-menu-wrapper .main-menu a:hover:before,
   .main-menu-wrapper .main-menu li.active a:before {
     display: none;
   }
 
-  /* line 409, ../sass/_custom.scss */
+  /* line 376, ../sass/_custom.scss */
   .icon-angle-right:before,
   .main-menu li:before,
   .header-wrapper .pane-user-menu .sub-menu li:before,
@@ -695,47 +820,47 @@ body {
     display: none;
   }
 
-  /* line 417, ../sass/_custom.scss */
+  /* line 384, ../sass/_custom.scss */
   .main-menu li.first .menu-item {
     margin-left: 0;
   }
 
-  /* line 421, ../sass/_custom.scss */
+  /* line 388, ../sass/_custom.scss */
   .navigation-wrapper,
   .navigation-inner {
     height: initial;
     overflow: hidden;
   }
 
-  /* line 427, ../sass/_custom.scss */
+  /* line 394, ../sass/_custom.scss */
   .secondary-menu li .menu-item,
   .header-wrapper .pane-user-menu .sub-menu li .menu-item {
     color: #001a27;
   }
 
-  /* line 432, ../sass/_custom.scss */
+  /* line 399, ../sass/_custom.scss */
   .rs-carousel-tabs {
     padding-top: 20px;
   }
 
-  /* line 436, ../sass/_custom.scss */
+  /* line 403, ../sass/_custom.scss */
   .rs-carousel-mask .rs-carousel-item-title {
     display: block;
   }
 
-  /* line 441, ../sass/_custom.scss */
+  /* line 408, ../sass/_custom.scss */
   .user .form-item-name {
     width: 100%;
   }
-  /* line 445, ../sass/_custom.scss */
+  /* line 412, ../sass/_custom.scss */
   .user label {
     padding-top: 14px;
   }
-  /* line 449, ../sass/_custom.scss */
+  /* line 416, ../sass/_custom.scss */
   .user .form-actions {
     margin-left: 10px;
   }
-  /* line 453, ../sass/_custom.scss */
+  /* line 420, ../sass/_custom.scss */
   .user .form-item-name,
   .user .form-item-pass {
     padding-right: 0;
