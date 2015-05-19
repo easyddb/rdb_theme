@@ -524,10 +524,6 @@ a:hover {
   overflow: initial;
 }
 
-.secondary-menu .menu-item {
-  color: #000;
-}
-
 .user .form-submit,
 .search .form-submit {
   border: 2px solid #fff;
