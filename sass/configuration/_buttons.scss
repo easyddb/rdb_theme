@@ -122,9 +122,9 @@ a.button,
   }
 }
 
-/* Header button */
-%button-header {
-  @include create-gradient-button($button-theme-color, $menu-item-2-background-color, $menu-item-1-background-color);
+/* Default button */
+%button-default {
+  @include create-gradient-button($button-theme-color, $button-default-bg, darken($button-default-bg, 15%));
 }
 
 /* Theme button */
@@ -147,10 +147,6 @@ a.button,
   @include create-gradient-button($button-danger-color, $button-danger-bg, darken($button-danger-bg, 15%));
 }
 
-/* Search button */
-%button-search {
-  @include create-gradient-button($button-danger-color, $button-danger-bg, darken($button-danger-bg, 15%));
-}
 
 /* Don't use native buttons on iOS */
 input[type=submit].button,

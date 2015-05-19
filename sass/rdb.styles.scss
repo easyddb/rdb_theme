@@ -14,17 +14,16 @@
 @import "zen";
 
 // Include configuration
-@import "configuration/_variables";
+@import "../../../../../profiles/ding2/themes/ddbasic/sass/configuration/_variables";
 @import "configuration/_colors";
-@import "configuration/_configuration";
+@import "../../../../../profiles/ding2/themes/ddbasic/sass/configuration/_configuration";
+@import "configuration/_buttons";
+@import "configuration/_colors_settings";
 
 
 // Include framework
-@import "framework/_mixins";
-@import "framework/_buttons";
+@import "../../../../../profiles/ding2/themes/ddbasic/sass/framework/_mixins";
 
-// Custom font
-@import "../../ddbasic/sass/framework/_fontawesome";
 
 // Custom theme styles
 @import "_custom";

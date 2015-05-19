@@ -20,7 +20,7 @@ $info = array(
     'navigation_text_color_hover' => t('Navigation text color - hover'),
     'tabroll_background_color_mobile' => t('Tabroll background color - mobile'),
     'link' => t('Link color'),
-    'link_hover' => t('Label color hover'),
+    'link_hover' => t('Link color hover'),
     'labels_background_color' => t('Label background color'),
     'labels_background_color_hover' => t('Label background color hover'),
     'labels_text_color' => t('Label text color'),
@@ -65,12 +65,12 @@ $info = array(
 		'menu_item_3_background_color' => '#73b400',
 		'menu_item_4_background_color' => '#73a29a',
 		'menu_item_5_background_color' => '#436a71',
-        'navigation_background_color' => '#d8d8d8',
-        'navigation_text_color' => '#959594',
-        'navigation_text_color_hover' => '#000002',
+        'navigation_background_color' => '#001a28',
+        'navigation_text_color' => '#eeeeee',
+        'navigation_text_color_hover' => '#eeeeef',
         'tabroll_background_color_mobile' => '#a32e10',
-        'link' => '#e03402',
-        'link_hover' => '#eb4a1b',
+        'link' => '#436972',
+        'link_hover' => '#36555c',
         'labels_background_color' => '#e03402',
         'labels_background_color_hover' => '#eb4a1b',
         'labels_text_color' => '#fffffd',
@@ -138,7 +138,7 @@ $info = array(
 
   // CSS files (excluding @import) to rewrite with new color scheme.
   'css' => array(
-    'css/ddbasic.styles.css',
+    'css/rdb.styles.css',
   ),
 
   // Color areas to fill (x, y, width, height).
