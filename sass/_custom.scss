@@ -157,10 +157,6 @@
   overflow: initial;
 }
 
-.secondary-menu .menu-item {
-  color: $black;
-}
-
 .user .form-submit,
 .search .form-submit {
   @extend %button-header;
