@@ -1,7 +1,7 @@
-name        = RDB theme
-description = RDB subtheme
-core        = 7.x
-release     = 7.x-1.0
+name        = "RDB theme (subtheme to ddbasic)
+description = "Subtheme to ddbasic created for rdb.dk by Inlead."
+core        = "7.x"
+version     = "7.x-1.0"
 
 base theme = ddbasic
 
