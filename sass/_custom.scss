@@ -27,6 +27,7 @@
 }
 
 .topbar-menu {
+  background: #d8d8d8 !important;
   margin-top: 15px;
   
   .menu-item {
@@ -423,6 +424,40 @@
     .form-item-name,
     .form-item-pass {
       padding-right: 0;
+    }
+  }
+  
+  .secondary-menu li .menu-item,
+  .header-wrapper .pane-user-menu .sub-menu li .menu-item {
+    color: $topbar-text-color;
+  }
+  
+  .main-menu-wrapper .main-menu {
+    li:first-child a,
+    li:first-child a:hover:before,
+    li:first-child.active a:before,
+    li:first-child + li a,
+    li:first-child + li a:hover:before,
+    li:first-child + li.active a:before,
+    li:first-child + li + li a,
+    li:first-child + li + li a:hover:before,
+    li:first-child + li + li.active a:before,
+    li:first-child + li + li + li a,
+    li:first-child + li + li + li a:hover:before,
+    li:first-child + li + li + li.active a:before,
+    li:first-child + li + li + li + li a,
+    li:first-child + li + li + li + li a:hover:before,
+    li:first-child + li + li + li + li.active a:before {
+     background-color: transparent;
+    }
+    
+    a {
+      border: none;
+      padding: 10px 0;
+    }
+    
+    li {
+      margin-left: 10px;
     }
   }
 }
