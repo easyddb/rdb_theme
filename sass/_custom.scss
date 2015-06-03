@@ -376,14 +376,6 @@
     }
   }
   
-  .icon-angle-right:before,
-  .main-menu li:before,
-  .header-wrapper .pane-user-menu .sub-menu li:before,
-  .secondary-menu li:before, .system-user-menu li:before,
-  .sub-menu li:before, .footer .menu li:before {
-    display: none;
-  }
-  
   .main-menu li.first .menu-item {
     margin-left: 0;
   }
@@ -423,6 +415,40 @@
     .form-item-name,
     .form-item-pass {
       padding-right: 0;
+    }
+  }
+  
+  .secondary-menu li .menu-item,
+  .header-wrapper .pane-user-menu .sub-menu li .menu-item {
+    color: $topbar-text-color;
+  }
+  
+  .main-menu-wrapper .main-menu {
+    li:first-child a,
+    li:first-child a:hover:before,
+    li:first-child.active a:before,
+    li:first-child + li a,
+    li:first-child + li a:hover:before,
+    li:first-child + li.active a:before,
+    li:first-child + li + li a,
+    li:first-child + li + li a:hover:before,
+    li:first-child + li + li.active a:before,
+    li:first-child + li + li + li a,
+    li:first-child + li + li + li a:hover:before,
+    li:first-child + li + li + li.active a:before,
+    li:first-child + li + li + li + li a,
+    li:first-child + li + li + li + li a:hover:before,
+    li:first-child + li + li + li + li.active a:before {
+     background-color: transparent;
+    }
+    
+    a {
+      border: none;
+      padding: 10px 0;
+    }
+    
+    li {
+      margin-left: 10px;
     }
   }
 }
